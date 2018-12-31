@@ -1,0 +1,285 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4AD09338-8EA8-42F1-A967-9DF1521CB190}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>BIP_AntiAliaser</RootNamespace>
+    <AssemblyName>BIP_AntiAliaser</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Magick.NET-Q8-AnyCPU, Version=7.9.2.0, Culture=neutral, PublicKeyToken=2004825badfa91ec, processorArchitecture=MSIL">
+      <HintPath>..\packages\Magick.NET-Q8-AnyCPU.7.9.2\lib\net40\Magick.NET-Q8-AnyCPU.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find17.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find19.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find23.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find27.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find28.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\with1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\with2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\with3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\with4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\with5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\with6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\with7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\with8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\with9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\with10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\with11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\with12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\with13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\with14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\with15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\with16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\with17.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\with18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\with19.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\with20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\with21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\with22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\with23.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\with24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\with25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\with26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\with27.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\with28.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\with29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\with30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\with31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\with32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find33.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find34.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find36.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\with33.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\with34.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\with35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\with36.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
