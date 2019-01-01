@@ -82,7 +82,7 @@ namespace BIP_AntiAliaser
                 var inputFileExtension = Path.GetExtension(file);
                 if (inputFileExtension != ".png")
                 {
-                    Console.WriteLine($"Файл {file} не PNG. Пропускаем.");
+                    Console.WriteLine($"Файл {file} не PNG. Пропускаем.\r\n");
                     return;
                 }
                 changed = false;
@@ -110,12 +110,9 @@ namespace BIP_AntiAliaser
                                 && pos.SimilarityMetric < 0.01
                                 )
                             {
-                                //if (i <= 32)
-                                //{
-                                    changed = true;
-                                    str = string.Format("{0},{1}", pos.BestMatch.X, pos.BestMatch.Y);
-                                    Console.WriteLine($"    Найден в позиции {str}");
-                                //}
+                                changed = true;
+                                str = string.Format("{0},{1}", pos.BestMatch.X, pos.BestMatch.Y);
+                                Console.WriteLine($"    Найден в позиции {str}");
                                 poSearchIn.Composite(pattern2, pos.BestMatch.X, pos.BestMatch.Y, CompositeOperator.Over);
                                 if (i > 32)
                                 {
@@ -131,12 +128,12 @@ namespace BIP_AntiAliaser
                             image.Write(file);
                         }
                     }
-                    else Console.WriteLine("Слишком маленькое, пропускаем");
+                    else Console.WriteLine("Слишком маленькое, пропускаем\r\n");
                 }
             }
             catch (MagickMissingDelegateErrorException)
             {
-                Console.WriteLine($"Файл {file} не является картинкой. Пропускаем.");
+                Console.WriteLine($"Файл {file} не является картинкой. Пропускаем.\r\n");
             }
         }
     }
