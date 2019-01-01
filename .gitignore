@@ -18,11 +18,13 @@
 x64/
 x86/
 bld/
+## <<< Replaced dy Schakal for EXE population.
 #[Bb]in/
 bin/Debug/
 bin/Release/*.pdb
 bin/Release/*.config
 bin/Release/*.xml
+## >>> Replaced dy Schakal for EXE population.
 [Oo]bj/
 [Ll]og/
 
