@@ -71,6 +71,7 @@ namespace BIP_AntiAliaser
             MagickImage pattern2;
             MagickSearchResult pos;
             MagickImage tmpImg;
+            MagickImage poSearchIn;
             bool changed;
             int X, Y;
 
@@ -85,11 +86,13 @@ namespace BIP_AntiAliaser
                     return;
                 }
                 changed = false;
+                tmpImg = new MagickImage(file);
+                MagickImage yellowpattern = new MagickImage(color: Color.Yellow, width: image.Width - 6, height: image.Height - 2);
+                tmpImg.Composite(yellowpattern, 3, 1, CompositeOperator.Over);
                 for (int i = 1; i <= 36; i++)
                 {
                     if (image.Height > 3 && image.Width > 3)
                     {
-
                         X = 177; Y = 177;
                         str = "find" + i.ToString();
                         bmp = (Bitmap)Properties.Resources.ResourceManager.GetObject(str);
@@ -98,39 +101,30 @@ namespace BIP_AntiAliaser
                         bmp = (Bitmap)Properties.Resources.ResourceManager.GetObject(str);
                         pattern2 = new MagickImage(bmp);
                         Console.WriteLine($"  Ищем шаблон {i}");
-                        if (i > 32)
-                        { tmpImg = new MagickImage(file); }
-                        else
-                        { tmpImg = null; }
                         do
                         {
-                            pos = image.SubImageSearch(pattern, ErrorMetric.Absolute, 0.001);
-
+                            if (i <= 32) poSearchIn = image; else poSearchIn = tmpImg;
+                            pos = poSearchIn.SubImageSearch(pattern, ErrorMetric.Absolute, 0.001);
                             if (pos != null
                                 && !(X == pos.BestMatch.X & Y == pos.BestMatch.Y)
                                 && pos.SimilarityMetric < 0.01
                                 )
                             {
-                                if (i <= 32)
-                                {
+                                //if (i <= 32)
+                                //{
                                     changed = true;
                                     str = string.Format("{0},{1}", pos.BestMatch.X, pos.BestMatch.Y);
                                     Console.WriteLine($"    Найден в позиции {str}");
-                                }
-                                image.Composite(pattern2, pos.BestMatch.X, pos.BestMatch.Y, CompositeOperator.Over);
-                                if (i > 32 && (pos.BestMatch.Y == 0 || pos.BestMatch.Y == image.Height - 1))
+                                //}
+                                poSearchIn.Composite(pattern2, pos.BestMatch.X, pos.BestMatch.Y, CompositeOperator.Over);
+                                if (i > 32)
                                 {
-                                    changed = true;
-                                    str = string.Format("{0},{1}", pos.BestMatch.X, pos.BestMatch.Y);
-                                    Console.WriteLine($"    Найден в позиции {str}");
-                                    tmpImg.Composite(pattern2, pos.BestMatch.X, pos.BestMatch.Y, CompositeOperator.Over);
+                                    image.Composite(pattern2, pos.BestMatch.X, pos.BestMatch.Y, CompositeOperator.Over);
                                 }
                             }
                             else pos = null;
                         }
                         while (pos != null);
-                        if (i > 32) { image = (MagickImage)tmpImg.Clone(); }
-                        image.Write(file);
                         if (changed)
                         {
                             image.Normalize();
